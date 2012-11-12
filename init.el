@@ -142,6 +142,11 @@
 (add-hook 'perl-mode-hook 'turn-on-font-lock)
 (add-hook 'perl-mode-hook 'toggle-transient-mark-mode)
 
+;; Matlab Stuff Here
+(setq auto-mode-alist (cons '("\.m$" . matlab-mode) auto-mode-alist))
+(add-hook 'matlab-mode-hook 'turn-on-font-lock)
+(add-hook 'matlab-mode-hook 'toggle-transient-mark-mode)
+
 (defun my-compile ()
   "Use compile to run python programs"
   (interactive)
